@@ -2,91 +2,245 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="compass_icon.png" />
+    <link rel="icon" type="image/png" href="/icons/compass_icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <title>Compass</title>
   </head>
-  <body class="bg-gray-100 m-0 p-0 overflow-hidden">
-    <div class="h-screen w-screen flex flex-col-reverse md:flex-row">
+  <body class="bg-gray-100 m-0 p-0 overflow-hidden scrollbar-none">
+    <div
+      class="h-screen w-screen flex flex-col-reverse md:flex-row overflow-x-hidden scrollbar-none"
+    >
       <!-- Navigation bar -->
       <div
-        class="bg-gray-100 h-auto w-full md:w-15 md:h-full lg:w-60 flex flex-col justify-between fixed bottom-0 z-50"
+        class="bg-gray-100 h-auto w-full md:w-20 md:h-full lg:w-40 flex flex-col justify-between fixed bottom-0 z-50 shadow-md"
       >
         <!-- inner tab container -->
         <div
-          class="p-1.5 flex align-middle justify-around flex-row md:flex-col md:h-auto items-center"
+          class="p-1.5 flex align-middle justify-around flex-row md:flex-col md:h-auto items-center md:pt-3"
         >
-          <div class="h-10 w-10 md:h-8 md:w-8 md:mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              viewBox="0 0 256 256"
+          <!-- Hub tab -->
+          <div
+            class="flex flex-row items-center justify-center md:p-3 md:bg-gray-300 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="hubTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
             >
-              <path
-                d="M224,120v96a8,8,0,0,1-8,8H160a8,8,0,0,1-8-8V164a4,4,0,0,0-4-4H108a4,4,0,0,0-4,4v52a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V120a16,16,0,0,1,4.69-11.31l80-80a16,16,0,0,1,22.62,0l80,80A16,16,0,0,1,224,120Z"
-              ></path>
-            </svg>
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/home_filled_icon.png"
+                alt=""
+                id="hubIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer select-none m-0 p-0"
+            >
+              Hub
+            </h5>
           </div>
-          <div class="h-10 w-10 md:h-8 md:w-8 md:mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              viewBox="0 0 256 256"
+
+          <!-- Ledger tab -->
+
+          <div
+            class="flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="ledgerTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md cursor-pointer"
             >
-              <path
-                d="M168,128a40,40,0,1,1-40-40A40,40,0,0,1,168,128Zm80-64V192a8,8,0,0,1-8,8H16a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H240A8,8,0,0,1,248,64Zm-16,46.35A56.78,56.78,0,0,1,193.65,72H62.35A56.78,56.78,0,0,1,24,110.35v35.3A56.78,56.78,0,0,1,62.35,184h131.3A56.78,56.78,0,0,1,232,145.65Z"
-              ></path>
-            </svg>
+              <img
+                class="md:h-6 md:w-6 w-8 h-8 cursor-pointer"
+                src="/icons/transaction_outline_icon.png"
+                alt=""
+                id="ledgerIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block m-0 p-0 cursor-pointer select-none"
+            >
+              Ledger
+            </h5>
           </div>
-          <div class="h-10 w-10 md:h-8 md:w-8 md:mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              viewBox="0 0 256 256"
+
+          <!-- Planner tab -->
+          <div
+            class="flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="plannerTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
             >
-              <path
-                d="M216,64H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,56V184a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm-36,80a12,12,0,1,1,12-12A12,12,0,0,1,180,144Z"
-              ></path>
-            </svg>
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/budget_outline_icon.png"
+                alt=""
+                id="plannerIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              Planner
+            </h5>
           </div>
-          <div class="h-10 w-10 md:h-8 md:w-8 md:mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              viewBox="0 0 256 256"
+          <!-- Vaults tab -->
+          <div
+            class="flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="vaultsTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
             >
-              <path
-                d="M240,128v64a8,8,0,0,1-8,8H168a8,8,0,0,1-5.66-13.66L188.69,160,136,107.31l-34.34,34.35a8,8,0,0,1-11.32,0l-72-72A8,8,0,0,1,29.66,58.34L96,124.69l34.34-34.35a8,8,0,0,1,11.32,0L200,148.69l26.34-26.35A8,8,0,0,1,240,128Z"
-              ></path>
-            </svg>
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/accounts_outline_icon.png"
+                alt=""
+                id="vaultsIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              Vaults
+            </h5>
           </div>
-          <div class="h-10 w-10 md:h-8 md:w-8 md:mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              viewBox="0 0 256 256"
+          <!-- More tab -->
+          <div
+            class="md:hidden flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="moreTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
             >
-              <path
-                d="M240,56v64a8,8,0,0,1-13.66,5.66L200,99.31l-58.34,58.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,188.69,88,162.34,61.66A8,8,0,0,1,168,48h64A8,8,0,0,1,240,56Z"
-              ></path>
-            </svg>
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/more_outline_icon.png"
+                alt=""
+                id="moreIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              More
+            </h5>
+          </div>
+          <!-- Portfolio tab -->
+          <div
+            class="hidden md:flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="portfolioTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
+            >
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/investments_outline_icon.png"
+                alt=""
+                id="portfolioIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              Portfolio
+            </h5>
+          </div>
+
+          <!-- Goal tab -->
+          <div
+            class="hidden md:flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="goalTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
+            >
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/goal_outline_icon.png"
+                alt=""
+                id="goalIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              Goal
+            </h5>
+          </div>
+
+          <!-- Dues tab  -->
+          <div
+            class="hidden md:flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="duesTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
+            >
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/debt_outline_icon.png"
+                alt=""
+                id="duesIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              Dues
+            </h5>
+          </div>
+          <!-- Tune Up tab -->
+          <div
+            class="hidden md:flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1 md:mb-1 md:hover:shadow-sm"
+            id="tuneUpTab"
+          >
+            <div
+              class="h-10 w-10 md:h-8 md:w-8 flex items-center justify-center md:bg-white rounded-md"
+            >
+              <img
+                class="md:h-6 md:w-6 cursor-pointer w-8 h-8"
+                src="/icons/settings_outline_icon.png"
+                alt=""
+                id="tuneUpIcon"
+              />
+            </div>
+            <h5
+              class="hidden w-20 text-center lg:block cursor-pointer m-0 p-0 select-none"
+            >
+              Tune Up
+            </h5>
           </div>
         </div>
+
         <!--Inner  Profile  container -->
         <div class="hidden md:block h-18">
-          <div class="w-auto h-auto m-2">
-            <img
-              src="https://clipartcraft.com/images/no-logo-placeholder-9.png"
-              alt=""
-              class="w-full h-full rounded-full border-2 border-gray-300 shadow-sm object-cover"
-            />
+          <div
+            class="flex flex-row items-center justify-center md:p-3 rounded-xl cursor-pointer md:mt-1.5 md:mb-1.5"
+            id=""
+          >
+            <div class="md:h-10 md:w-10 flex items-center justify-center">
+              <img
+                class="shadow-gray-500 border-2 border-gray-300 rounded-full object-cover w-full h-full shadow-sm"
+                src="https://media.licdn.com/dms/image/v2/D5603AQFbQTng7923Fw/profile-displayphoto-shrink_800_800/B56ZacXWaGHsAc-/0/1746380090225?e=1753920000&v=beta&t=qbNeBpASW4R8dBwyB6SX8KQ_O8OJtL5gcLD3d-0TXXo"
+                alt=""
+              />
+            </div>
+            <h6
+              class="hidden italic text-sm font-sans w-20 overflow-hidden wrap-break-word lg:block cursor-pointer m-0 pl-2 select-none"
+            >
+              Prince Sabu
+            </h6>
           </div>
         </div>
       </div>
 
       <!-- Main things go here -->
-      <div class="h-full w-full overflow-scroll">
+      <div
+        class="h-full w-full overflow-scroll overflow-x-hidden scrollbar-none hide-scrollbar"
+      >
         <!-- Header bar -->
         <div
           class="md:hidden w-full h-18 px-6 py-4 bg-white shadow-md flex items-center justify-between"
@@ -100,42 +254,148 @@
             />
           </div>
         </div>
-        <!-- Contents -->
-        <div class="border lg:ml-60  border-amber-800 md:ml-15 mb-13 md:mb-0">
+        <!-- Hub Contents -->
+        <div
+          class="lg:ml-40 border-2 border-amber-800 md:ml-20 mb-13 md:mb-0"
+          id="hubContainer"
+        >
           <!-- cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
             <!-- Card 1 -->
             <div
-              class="bg-gradient-to-t from-blue-400 to-blue-500 h-30 rounded-xl shadow flex items-center justify-center"
-            ></div>
+              class="bg-gradient-to-tl from-blue-300 to-blue-500 h-35 rounded-xl shadow flex items-center justify-center p-3 hover:shadow-xl"
+            >
+              <div class="h-full w-full"></div>
+            </div>
             <!-- Card 2 -->
             <div
-              class="bg-gradient-to-t from-gray-900 to-gray-950 h-30 rounded-xl shadow flex items-center justify-center"
-            ></div>
+              class="bg-gradient-to-tr from-gray-800 to-gray-950 h-35 rounded-xl shadow flex items-center justify-center p-3 hover:shadow-xl"
+            >
+              <div class="h-full w-full"></div>
+            </div>
             <!-- Card 3 -->
             <div
-              class="bg-gradient-to-t from-blue-400 to-blue-500 h-30 rounded-xl shadow flex items-center justify-center"
-            ></div>
+              class="bg-gradient-to-t from-blue-400 to-blue-500 h-35 rounded-xl shadow flex items-center justify-center p-3 hover:shadow-xl"
+            >
+              <div class="h-full w-full"></div>
+            </div>
             <!-- Card 4 -->
             <div
-              class="bg-gradient-to-t from-gray-900 to-gray-950 h-30 rounded-xl shadow flex items-center justify-center"
-            ></div>
+              class="bg-gradient-to-b from-gray-900 to-gray-950 h-35 rounded-xl shadow flex items-center justify-center p-3 hover:shadow-xl"
+            >
+              <div class="h-full w-full"></div>
+            </div>
             <!-- Card 5 -->
             <div
-              class="bg-gradient-to-t from-blue-400 to-blue-500 h-30 rounded-xl shadow flex items-center justify-center"
-            ></div>
+              class="bg-gradient-to-tr from-blue-300 to-blue-500 h-35 rounded-xl shadow flex items-center justify-center p-3 hover:shadow-xl"
+            >
+              <div class="h-full w-full"></div>
+            </div>
             <!-- Card 6 -->
             <div
-              class="bg-gradient-to-t from-gray-800 to-gray-950 h-30 rounded-xl shadow flex items-center justify-center"
-            ></div>
+              class="bg-gradient-to-tl from-gray-800 to-gray-950 h-35 rounded-xl shadow flex items-center justify-center p-3 hover:shadow-xl"
+            >
+              <div class="h-full w-full"></div>
+            </div>
           </div>
 
           <!-- Overall Graph  -->
           <div class="p-4">
-            <div class="bg-white rounded-xl h-80 shadow">
-              <!-- graph goes here -->
+            <div class="bg-white rounded-xl h-85 shadow p-3 hover:shadow-xl">
+              <div class="h-full w-full"></div>
             </div>
           </div>
+
+          <!-- Other graph -->
+          <div class="gap-4 p-4 grid lg:grid-cols-2">
+            <div class="bg-white rounded-xl shadow h-75 p-3 hover:shadow-xl">
+              <div class="h-full w-full"></div>
+            </div>
+            <div class="bg-white rounded-xl shadow h-75 p-3 hover:shadow-xl">
+              <div class="h-full w-full"></div>
+            </div>
+          </div>
+
+          <!-- large graph -->
+          <div class="p-4">
+            <div class="bg-white rounded-xl h-85 shadow p-3 hover:shadow-xl">
+              <div class="h-full w-full"></div>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="p-4">
+            <div class="bg-white rounded-xl h-100 shadow p-3 hover:shadow-xl">
+              <div class="h-full w-full"></div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="p-4"></div>
+        </div>
+
+        <!-- Ledger Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="ledgerContainer"
+        >
+          Hello, This is Ledger
+        </div>
+
+        <!-- Planner Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="plannerContainer"
+        >
+          Hello, This is Planner
+        </div>
+
+        <!-- Vaults Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="vaultsContainer"
+        >
+          Hello, This is Vaults
+        </div>
+
+        <!-- More Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="moreContainer"
+        >
+          Hello, This is More
+        </div>
+
+        <!-- Portfolio Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="portfolioContainer"
+        >
+          Hello, This is Portfolio
+        </div>
+
+        <!-- Goal Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="goalContainer"
+        >
+          Hello, This is Goal
+        </div>
+
+        <!-- Dues Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="duesContainer"
+        >
+          Hello, This is Dues
+        </div>
+
+        <!-- Tune Up Contents -->
+        <div
+          class="lg:ml-40 border border-amber-800 md:ml-20 mb-13 md:mb-0 hidden"
+          id="tuneUpContainer"
+        >
+          Hello, This is Tune Up
         </div>
       </div>
     </div>
